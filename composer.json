@@ -1,0 +1,24 @@
+{
+    "name": "felipeoreno/hotel-zero-two",
+    "description": "Simulado Hotel",
+    "type": "project",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "Hotel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Felipe de Oliveira Renó",
+            "email": "felipereno2005@gmail.com"
+        },
+        {
+            "name": "Cauê Ribeiro de Figueiredo",
+            "email": "domcaue@gmail.com"
+        }
+    ],
+    "require": {
+        "filp/whoops": "^2.15"
+    }
+}
