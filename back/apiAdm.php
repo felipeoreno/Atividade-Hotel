@@ -46,6 +46,7 @@
             echo("Erro ao criar Quarto!");
         }
     }
+
         // rota para excluir um Quarto
         if($_SERVER['REQUEST_METHOD'] === 'DELETE' && isset($_GET['id'])){
             $id = $_GET['id'];
@@ -58,6 +59,7 @@
                 echo("Erro ao excluir quarto.");
             }
         }
+        
     // rota para atualizar um Quarto existente
     if($_SERVER['REQUEST_METHOD'] === 'PUT' && isset($_GET['id'])){
         parse_str(file_get_contents("php://input"), $_PUT);
