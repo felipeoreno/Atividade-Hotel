@@ -38,33 +38,43 @@
         <h6 class="card-subtitle mb-2 text-body-secondary">Escolha um disponível</h6>
       </div>
       <div class="card-body">
-      <form class="mb-3 row">
-          <div class="col-6 mb-3 form-floating">
-            <!-- <div class=""> -->
-              <input type="text" class="form-control" id="inputNome">
+      <form class="row g-2">
+          <div class="col-6">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="inputNome" placeholder="Last name">
               <label for="inputNome">Nome</label>
-            <!-- </div> -->
+            </div>
           </div>
-          <div class="col-6 mb-3 form-floating">
-            <input id="last" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-            <label for="last">aaaaaaaaaa</label>
+          <div class="col-6">
+            <div class="form-floating">
+              <input type="number" class="form-control" id="inputNumero" placeholder="Número do quarto">
+              <label for="inputNumero">Número do Quarto</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-floating">
+              <input type="date" class="form-control" id="inputCheckIn" placeholder="Check-In">
+              <label for="inputCheckIn">Data de Check-In</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-floating">
+              <input type="date" class="form-control" id="inputCheckOut" placeholder="Check-Out">
+              <label for="inputCheckOut">Data de Check-Out</label>
+            </div>
           </div>
           <div class="col-3">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id="botaoForm">Enviar</button>
           </div>
       </form>
     </div>
     </div>
   </nav>
 
-
-  <nav class="navbar fixed-bottom navbar-expand-lg bg-body-secondary">
+  <nav class="navbar fixed-bottom bg-body-secondary">
     <div class="container-fluid">
-      <span class="navbar-brand ms-3 mb-0 h1">Hotel Zero Two</span> 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end pe-3 me-3" id="navbarSupportedContent">
+      <span class="navbar-brand ms-3 mb-0 h1">Hotel Zero Two</span>
+      <div class="justify-content-end pe-3 me-3">
             <span class="navbar-text">
               Contato:
             </span>
