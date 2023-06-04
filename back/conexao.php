@@ -1,8 +1,9 @@
 <?php
     $host = 'localhost';
-    $dbname = 'hotelZeroTwo';
+    $dbname = 'hotelzerotwo';
     $username = 'root';
-    $password = 'sucesso';
+    // $password = 'sucesso'; // senha do cauê
+    $password = ''; // senha do fefe
 
     try {
         $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
