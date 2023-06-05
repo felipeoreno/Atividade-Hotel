@@ -27,7 +27,7 @@
         $quartos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         // os dados da variável $quartos são transformados em um JSON válido
         echo(json_encode($quartos));
-    } 
+    }
     
       // rota para criar quartos
       if($_SERVER['REQUEST_METHOD'] === 'POST'){

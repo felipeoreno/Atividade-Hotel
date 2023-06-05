@@ -1,9 +1,9 @@
 const containerQuartos = document.querySelector('#quartos');
 
-const URL = 'http://localhost:8080/apiQuartos.php';
+const URLQuartos = 'http://localhost:8080/apiQuartos.php';
 
 function carregarQuartos(){
-    fetch(URL, {
+    fetch(URLQuartos, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -20,12 +20,12 @@ function carregarQuartos(){
                     const card = document.createElement('card');
                     card.innerHTML = `
                     <div class="col-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Quarto ${quarto.numero}</h5>
-                                <p class="card-text">${quarto.tipo}</p>
-                            </div>
-                        </div>
+                      <div class="card">
+                          <div class="card-body">
+                              <h5 class="card-title">Quarto ${quarto.numero}</h5>
+                              <p class="card-text">${quarto.tipo}</p>
+                          </div>
+                      </div>
                     </div>
                     `;
                     containerQuartos.appendChild(card);
