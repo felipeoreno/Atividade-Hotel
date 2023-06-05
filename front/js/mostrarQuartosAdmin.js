@@ -24,6 +24,20 @@ function carregarQuartos(){
                         <div class="card-body">
                             <h5 class="card-title">Quarto ${quarto.numero}</h5>
                             <p class="card-text">${quarto.tipo}</p>
+                            <p class="card-text">Quarto disponível</p>
+                        </div>
+                    </div>
+                    `;
+                    containerQuartos.appendChild(card);
+                } else{
+                    const card = document.createElement('card');
+                    card.classList.add('col-4');
+                    card.innerHTML = `
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Quarto ${quarto.numero}</h5>
+                            <p class="card-text">${quarto.tipo}</p>
+                            <p class="card-text">Quarto indisponível</p>
                         </div>
                     </div>
                     `;

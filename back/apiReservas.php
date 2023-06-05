@@ -51,3 +51,17 @@
             echo("Erro ao criar reserva!");
         }
     }
+
+    // rota para excluir uma reserva
+    if($_SERVER['REQUEST_METHOD'] === 'DELETE' && isset($_GET['id'])){
+        $id = $_GET['id'];
+        $stmt = $conn->prepare("DELETE FROM reservas WHERE id = :id;");
+        $stmt->bindParam(':id', $id);
+
+        if($stmt->execute()){
+            echo("Reserva excluído com sucesso");
+        } else{
+            echo("Erro ao excluir Reserva.");
+        }
+    }
+    

@@ -1,9 +1,8 @@
 const containerReservas = document.querySelector('#reservas');
-
-const URL = 'http://localhost:8080/apiReservas.php';
+const URLReservas = 'http://localhost:8080/apiReservas.php';
 
 function carregarReservas(){
-    fetch(URL, {
+    fetch(URLReservas, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -14,20 +13,21 @@ function carregarReservas(){
         .then(reservas => {
             containerReservas.innerHTML = '';
             const options = {year: 'numeric', month: 'numeric', day: 'numeric'}
-            for(let i = 0; i <= reservas.length; i++){
+            for(let i = 0; i < reservas.length; i++){
                 const reserva = reservas[i];
-                const date_in = new Date(Date.UTC(reserva.check_in));
-                const date_out = new Date(Date.UTC(reserva.check_out));    
+                const date_in = new Date(reserva.check_in);
+                const date_out = new Date(reserva.check_out);
                 const card = document.createElement('card');
+                card.classList.add('col-4');
                 card.innerHTML = `
-                <div class="col-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title col-6">Quarto ${reserva.quarto}</h5>
-                            <p class="card-text">Nome do cliente: ${reserva.cliente}</p>
-                            <p class="card-text">Data de check-out: ${date_in.toLocaleDateString(options)}</p>
-                            <p class="card-text">Data de check-out: ${date_out.toLocaleDateString(options)}</p>
-                        </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title col-6">Quarto ${reserva.quarto}</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Nome do cliente: ${reserva.cliente}</p>
+                        <p class="card-text">Data de check-in: ${date_in.toLocaleDateString(options)}</p>
+                        <p class="card-text">Data de check-out: ${date_out.toLocaleDateString(options)}</p>
                     </div>
                 </div>
                 `;

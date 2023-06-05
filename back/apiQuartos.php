@@ -31,13 +31,13 @@
     
       // rota para criar quartos
       if($_SERVER['REQUEST_METHOD'] === 'POST'){
-        $numeroQuarto = $_POST['numeroQuarto'];
-        $tipoQuarto = $_POST['tipoQuarto'];
+        $numero = $_POST['numero'];
+        $tipo = $_POST['tipo'];
 
 
-        $stmt = $conn->prepare("INSERT INTO quartos (numeroQuarto, tipoQuarto) VALUES (:numeroQuarto, :tipoQuarto)");
-        $stmt->bindParam(':numeroQuarto', $numeroQuarto);
-        $stmt->bindParam(':tipoQuarto', $tipoQuarto);
+        $stmt = $conn->prepare("INSERT INTO quartos (numero, tipo) VALUES (:numero, :tipo)");
+        $stmt->bindParam(':numero', $numero);
+        $stmt->bindParam(':tipo', $tipo);
 
 
         if($stmt->execute()){

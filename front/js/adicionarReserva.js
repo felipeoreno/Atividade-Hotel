@@ -22,7 +22,7 @@ function adicionarReserva(e){
     })
         .then(response => response.json())
         .then(quartos => {
-            for(let i = 0; i <= quartos.length; i++){
+            for(let i = 0; i < quartos.length; i++){
                 const campo = quartos[i];
                 console.log("i: ", i)
                 console.log("campo: ", campo)
@@ -41,6 +41,7 @@ function adicionarReserva(e){
                             if(response.ok){
                                 console.log("response: ", response)
                                 swal("Reserva adicionada", "Sua reserva foi feita com sucesso!", "success");
+                                carregarQuartos();
                             } else{
                                 console.error('Erro ao adicionar reserva');
                                 swal("Erro ao adicionar reserva", "error");
@@ -58,8 +59,4 @@ function adicionarReserva(e){
         })
 }
 
-// const button = form.querySelector('#botaoForm');
-// button.addEventListener('click', function(event){
-//     event.preventDefault();
-    form.addEventListener('submit', adicionarReserva);
-// });
+form.addEventListener('submit', adicionarReserva);
